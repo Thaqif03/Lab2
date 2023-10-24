@@ -23,10 +23,16 @@ def find_min_max(data):
     dmin = min(data)
     print("Min is: " + str(dmin) + "Max is: " + str(dmax))
 
-def sort_temperature():
-    print("sort_temperature")
+def sort_temperature(data):
+    data = sorted(data)
+    return data
 
-def calc_median_temperature():
-    print("calc_median_temperature")
+
+def calc_median_temperature(data):
+    data = sort_temperature(data)
+    numdata = int(len(data)/2)
+
+    median = data[numdata]
+    print("The Median is: "+str(median))
 
 display_main_menu()
